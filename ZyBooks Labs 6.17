@@ -1,0 +1,34 @@
+# Alissa Sheikh 1623952 Many user-created passwords are simple and easy to guess. Write a program that takes a simple
+# password and makes it stronger by replacing characters using the key below, and by appending "q*s" to the end of
+# the input string. help found on chegg.com/homework-help/questions-and-answers/915-lab-password-modifier-many-user
+# -created-passwords-simple-easy-guess-write-program-take-q86218667 
+
+# input current password
+current_password = input()
+new_password = ''
+
+# create index
+index = 0
+while index < len(current_password):
+    character = current_password[index]
+# i becomes !
+    if character == 'i':
+        new_password = new_password + '!'
+# a becomes @
+    elif character == 'a':
+        new_password = new_password + '@'
+# m becomes M
+    elif character == 'm':
+        new_password = new_password + 'M'
+# B becomes 8
+    elif character == 'B':
+        new_password = new_password + '8'
+# o becomes .
+    elif character == 'o':
+        new_password = new_password + '.'
+    else:
+        new_password = new_password + character
+    index = index + 1
+
+new_password = new_password + 'q*s'
+print(new_password)
